@@ -1,0 +1,28 @@
+bool areOccurrencesEqual(char* s) {
+    int i, j;
+    int contador, atual = -1;
+    for(i = 0; s[i] != '\0'; i++) {
+        for(j = 0; j < i; j++) {
+            if (s[i] == s[j]) {
+                break;
+            }
+        }
+        if (j < i) {
+            continue; 
+        }
+
+        contador = 0;
+        for(j = 0; s[j] != '\0'; j++) {
+            if(s[j] == s[i]) {
+                contador++;
+            }
+        }
+        if (atual == -1) {
+            atual = contador;
+        } else if(contador != atual) {
+            return false;
+        }
+    }
+
+    return true;
+}
