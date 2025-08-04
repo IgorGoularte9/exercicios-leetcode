@@ -1,10 +1,3 @@
- struct TreeNode* balanceBST(struct TreeNode* raiz) {
-    struct TreeNode* nos[1000]; 
-    int indice = 0;
-    percursoEmOrdem(raiz, nos, &indice);
-    return construirArvoreBalanceada(nos, 0, indice - 1);
-}
-
 void percursoEmOrdem(struct TreeNode* raiz, struct TreeNode** nos, int* indice) {
     if (raiz == NULL) {
         return;
@@ -25,4 +18,9 @@ struct TreeNode* construirArvoreBalanceada(struct TreeNode** nos, int ini, int f
     return raiz;
 }
 
-
+ struct TreeNode* balanceBST(struct TreeNode* raiz) {
+    struct TreeNode* nos[1000]; 
+    int indice = 0;
+    percursoEmOrdem(raiz, nos, &indice);
+    return construirArvoreBalanceada(nos, 0, indice - 1);
+}
