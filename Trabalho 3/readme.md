@@ -1,5 +1,12 @@
 IGOR PEREIRA GOULARTE
 
-Dada a rootárvore de busca binária, retorne uma árvore de busca binária balanceada com os mesmos valores de nós . Se houver mais de uma resposta, retorne qualquer uma delas .
+1382. Balance a Binary Search Tree
 
-Uma árvore de pesquisa binária é balanceada se a profundidade das duas subárvores de cada nó nunca diferir em mais de 1.
+Given the root of a binary search tree, return a balanced binary search tree with the same node values. If there is more than one answer, return any of them.
+
+A binary search tree is balanced if the depth of the two subtrees of every node never differs by more than 1.
+
+Constraints:
+
+The number of nodes in the tree is in the range [1, 104].
+1 <= Node.val <= 105
