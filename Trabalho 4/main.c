@@ -29,4 +29,5 @@ struct ListNode* mergeKLists(struct ListNode** lists, int listsSize) {
     currentNode->next = NULL;
 
     return ficHead->next;
+    free(ficHead);
 }
